@@ -13,7 +13,7 @@ I am a self-taught full-stack developer. Currently busy learning and acquiring n
 
 #### Languages and Tools 
 
-`Arduino` `AWS` `Bootstrap` `w3schools` `Expressjs` `Figma` `Firebase` `Framer` `Git` `Heroku` `Linux` `MongoDB` `MySql` `Nginx` `NodeJS` `PostMan` `ReactJS` `Sass` `TypeScript` `JavaScript` `HTML` `CSS` `Express` `AdobeXD` `Ubuntu` `VS-Code` `Rabbit-MQ` `Docker` `Kubernetes` `Bash` 
+`Arduino` `AWS` `Bootstrap` `Expressjs` `Figma` `Firebase` `Framer` `Git` `Heroku` `Linux` `MongoDB` `MySql` `Nginx` `NodeJS` `PostMan` `ReactJS` `Sass` `TypeScript` `JavaScript` `HTML` `CSS` `Express` `AdobeXD` `Ubuntu` `VS-Code` `Rabbit-MQ` `Docker` `Kubernetes` `Bash` 
 
 #### Some of my works
 
