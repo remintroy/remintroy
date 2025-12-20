@@ -39,7 +39,7 @@ export const Hero = () => {
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-[15vw] sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] uppercase">
+              <h1 className="text-[15vw] sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tight sm:tracking-tighter leading-[0.85] uppercase">
                 Remin <br />
                 <span className="text-muted-foreground/20 outline-text">
                   T Roy
@@ -55,6 +55,11 @@ export const Hero = () => {
               <Button
                 size="lg"
                 className="h-14 px-8 rounded-full text-lg gap-2 w-full sm:w-auto"
+                onClick={() =>
+                  document
+                    .getElementById("fun")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Explore Work <ArrowRight className="h-5 w-5" />
               </Button>
@@ -62,6 +67,11 @@ export const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="h-14 px-8 rounded-full text-lg w-full sm:w-auto"
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Let&apos;s Talk
               </Button>

@@ -6,6 +6,17 @@ import { motion } from "framer-motion";
 export const Fun = () => {
   const puzzleTiles = [1, 2, 3, 9, 12, 14, null, 11, 10, 6, 5, 8, 7, 13, 4, 15];
 
+  const PlayNowButton = ({ className }: { className?: string }) => (
+    <Button
+      size="lg"
+      className={`h-14 px-8 rounded-full text-lg gap-2 group w-full sm:w-auto ${className}`}
+      onClick={() => window.open("https://fun.mastrovia.com/", "_blank")}
+    >
+      Play Now{" "}
+      <ExternalLink className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+    </Button>
+  );
+
   return (
     <Section id="fun" className="bg-background relative overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
@@ -19,7 +30,7 @@ export const Fun = () => {
         </div>
 
         <div className="lg:col-span-6 space-y-6 md:space-y-8">
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9]">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight sm:tracking-tighter uppercase leading-[0.9]">
             The <br />
             <span className="text-muted-foreground/20 outline-text">
               15-Puzzle
@@ -33,17 +44,8 @@ export const Fun = () => {
             minutes and keep your brain sharp. Go ahead, give it a try—can you
             beat the clock?
           </p>
-          <div className="pt-2">
-            <Button
-              size="lg"
-              className="h-14 px-8 rounded-full text-lg gap-2 group w-full sm:w-auto"
-              onClick={() =>
-                window.open("https://fun.mastrovia.com/", "_blank")
-              }
-            >
-              Play Now{" "}
-              <ExternalLink className="h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Button>
+          <div className="pt-2 hidden lg:block">
+            <PlayNowButton />
           </div>
         </div>
 
@@ -146,6 +148,10 @@ export const Fun = () => {
           {/* Decorative elements */}
           <div className="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 w-32 h-32 sm:w-40 sm:h-40 bg-primary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
           <div className="absolute -bottom-6 -left-6 sm:-bottom-10 sm:-left-10 w-32 h-32 sm:w-40 sm:h-40 bg-secondary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
+        </div>
+
+        <div className="lg:col-span-12 mt-6 lg:hidden">
+          <PlayNowButton />
         </div>
       </div>
     </Section>

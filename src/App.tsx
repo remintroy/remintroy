@@ -178,7 +178,7 @@ function App() {
                   <span className="text-sm font-bold uppercase tracking-[0.3em] text-white/40">
                     Contact
                   </span>
-                  <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
+                  <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight sm:tracking-tighter uppercase leading-[0.85]">
                     Let&apos;s <br />{" "}
                     <span
                       className="text-white/20 outline-text"
@@ -194,17 +194,26 @@ function App() {
                   projects. If you have an idea, let&apos;s make it happen.
                 </p>
 
-                <div className="flex flex-wrap gap-6 pt-6">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-6 w-full sm:w-auto">
                   <Button
                     size="lg"
-                    className="h-16 px-12 rounded-full text-xl bg-white text-black hover:bg-neutral-200"
+                    className="h-16 px-12 rounded-full text-xl bg-white text-black hover:bg-neutral-200 w-full sm:w-auto"
+                    onClick={() =>
+                      (window.location.href = "mailto:remin.t.roy@gmail.com")
+                    }
                   >
                     Email Me
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="h-16 px-12 rounded-full text-xl border-white/20 text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300"
+                    className="h-16 px-12 rounded-full text-xl border-white/20 text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300 w-full sm:w-auto"
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/remin-t-roy/",
+                        "_blank"
+                      )
+                    }
                   >
                     LinkedIn
                   </Button>
