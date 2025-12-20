@@ -6,6 +6,7 @@ import { Footer } from "./components/layout/Footer";
 import { Section } from "./components/layout/Section";
 import { Button } from "./components/ui/button";
 import { Noise } from "./components/ui/noise";
+import { Fun } from "./components/layout/Fun";
 // import { Projects } from "./components/layout/Projects";
 
 function App() {
@@ -61,6 +62,8 @@ function App() {
             <Navbar />
 
             <Hero />
+
+            <Fun />
 
             {/* <Projects /> */}
 

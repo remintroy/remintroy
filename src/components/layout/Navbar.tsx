@@ -59,6 +59,12 @@ export const Navbar = () => {
             Projects
           </a> */}
           <a
+            href="#fun"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Fun
+          </a>
+          <a
             href="#about"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
