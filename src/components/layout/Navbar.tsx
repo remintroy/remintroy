@@ -52,12 +52,12 @@ export const Navbar = () => {
           >
             Home
           </a>
-          <a
+          {/* <a
             href="#projects"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             Projects
-          </a>
+          </a> */}
           <a
             href="#about"
             className="text-sm font-medium hover:text-primary transition-colors"
@@ -84,8 +84,14 @@ export const Navbar = () => {
               <Sun className="h-5 w-5" />
             )}
           </Button>
-          <Button variant="outline" className="hidden md:inline-flex">
-            Resume
+          <Button
+            variant="outline"
+            className="hidden md:inline-flex"
+            onClick={() =>
+              window.open("https://github.com/remintroy", "_blank")
+            }
+          >
+            GitHub
           </Button>
         </div>
       </div>
