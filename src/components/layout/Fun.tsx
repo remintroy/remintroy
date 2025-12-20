@@ -32,7 +32,7 @@ export const Fun = () => {
         <div className="lg:col-span-6 space-y-6 md:space-y-8">
           <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight sm:tracking-tighter uppercase leading-[0.9]">
             The <br />
-            <span className="text-muted-foreground/20 outline-text">
+            <span className="text-muted-foreground/40 outline-text">
               15-Puzzle
             </span>
             <br />
@@ -49,105 +49,120 @@ export const Fun = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative w-full max-w-[320px] sm:max-w-[400px] p-4 sm:p-6 rounded-[2rem] sm:rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 shadow-2xl overflow-hidden group"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-
-            {/* Header info like screenshot */}
-            <div className="flex justify-between items-start mb-4 sm:mb-6 px-1 sm:px-2">
-              <div className="flex gap-3 sm:gap-4 bg-neutral-900/50 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/5">
-                <div className="flex flex-col">
-                  <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-neutral-500">
-                    Time
-                  </span>
-                  <span className="text-lg sm:text-xl font-black text-white">
-                    33s
-                  </span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-neutral-500">
-                    Moves
-                  </span>
-                  <span className="text-lg sm:text-xl font-black text-white">
-                    75
-                  </span>
-                </div>
+        <div className="lg:col-span-6 relative mt-8 lg:mt-0">
+          <div className="relative group p-4 sm:p-8 rounded-[2.5rem] bg-neutral-100 dark:bg-neutral-900/50 border border-border shadow-2xl overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-12 bg-neutral-200/50 dark:bg-neutral-900 flex items-center px-6 border-b border-border gap-2">
+              <div className="flex gap-1.5">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/40 border border-red-500/20" />
+                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/40 border border-yellow-500/20" />
+                <div className="w-2.5 h-2.5 rounded-full bg-green-500/40 border border-green-500/20" />
               </div>
-              <div className="flex gap-2">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
-                  <svg
-                    width="16"
-                    height="16"
-                    className="sm:w-5 sm:h-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="1" y1="1" x2="23" y2="23"></line>
-                    <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
-                    <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path>
-                    <line x1="12" y1="19" x2="12" y2="23"></line>
-                    <line x1="8" y1="23" x2="16" y2="23"></line>
-                  </svg>
-                </div>
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
-                  <svg
-                    width="16"
-                    height="16"
-                    className="sm:w-5 sm:h-5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
-                    <line x1="23" y1="9" x2="17" y2="15"></line>
-                    <line x1="17" y1="9" x2="23" y2="15"></line>
-                  </svg>
-                </div>
-              </div>
+              <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-muted-foreground/70 ml-2">
+                Interactive Mockup
+              </span>
             </div>
 
-            <div className="grid grid-cols-4 gap-2 sm:gap-3 bg-neutral-900/30 p-2 sm:p-3 rounded-[1.5rem] sm:rounded-3xl border border-white/5 shadow-inner mb-4 sm:mb-6">
-              {puzzleTiles.map((tile, i) => (
-                <motion.div
-                  key={i}
-                  initial={tile === null ? {} : { opacity: 0, y: 10 }}
-                  whileInView={tile === null ? {} : { opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.03 }}
-                  className={`aspect-square rounded-lg sm:rounded-xl flex items-center justify-center text-base sm:text-xl font-bold shadow-sm ${
-                    tile === null
-                      ? "bg-neutral-800/40 border border-white/5"
-                      : i < 3
-                      ? "bg-[#FCFCEE] text-neutral-900"
-                      : "bg-[#DCDCCB] text-neutral-800"
-                  }`}
-                >
-                  {tile}
-                </motion.div>
-              ))}
+            <div className="pt-12 flex justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="relative w-full max-w-[320px] sm:max-w-[400px] p-4 sm:p-6 rounded-[2rem] sm:rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 shadow-2xl overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+
+                {/* Header info like screenshot */}
+                <div className="flex justify-between items-start mb-4 sm:mb-6 px-1 sm:px-2">
+                  <div className="flex gap-3 sm:gap-4 bg-neutral-900/50 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/5">
+                    <div className="flex flex-col">
+                      <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-neutral-500">
+                        Time
+                      </span>
+                      <span className="text-lg sm:text-xl font-black text-white">
+                        33s
+                      </span>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-neutral-500">
+                        Moves
+                      </span>
+                      <span className="text-lg sm:text-xl font-black text-white">
+                        75
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
+                      <svg
+                        width="16"
+                        height="16"
+                        className="sm:w-5 sm:h-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                        <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+                        <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                      </svg>
+                    </div>
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
+                      <svg
+                        width="16"
+                        height="16"
+                        className="sm:w-5 sm:h-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-4 gap-2 sm:gap-3 bg-neutral-900/30 p-2 sm:p-3 rounded-[1.5rem] sm:rounded-3xl border border-white/5 shadow-inner mb-4 sm:mb-6">
+                  {puzzleTiles.map((tile, i) => (
+                    <motion.div
+                      key={i}
+                      initial={tile === null ? {} : { opacity: 0, y: 10 }}
+                      whileInView={tile === null ? {} : { opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.03 }}
+                      className={`aspect-square rounded-lg sm:rounded-xl flex items-center justify-center text-base sm:text-xl font-bold shadow-sm ${
+                        tile === null
+                          ? "bg-neutral-800/40 border border-white/5"
+                          : i < 3
+                          ? "bg-[#FCFCEE] text-neutral-900"
+                          : "bg-[#DCDCCB] text-neutral-800"
+                      }`}
+                    >
+                      {tile}
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="px-1 sm:px-2">
+                  <div className="w-full h-12 sm:h-14 rounded-xl sm:rounded-2xl bg-neutral-900/50 border border-white/5 flex items-center justify-center text-[10px] sm:text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">
+                    Restart
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
-            <div className="px-1 sm:px-2">
-              <div className="w-full h-12 sm:h-14 rounded-xl sm:rounded-2xl bg-neutral-900/50 border border-white/5 flex items-center justify-center text-[10px] sm:text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">
-                Restart
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Decorative elements */}
-          <div className="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 w-32 h-32 sm:w-40 sm:h-40 bg-primary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
-          <div className="absolute -bottom-6 -left-6 sm:-bottom-10 sm:-left-10 w-32 h-32 sm:w-40 sm:h-40 bg-secondary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
+            {/* Decorative elements within the card */}
+            <div className="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 w-32 h-32 sm:w-40 sm:h-40 bg-primary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
+            <div className="absolute -bottom-6 -left-6 sm:-bottom-10 sm:-left-10 w-32 h-32 sm:w-40 sm:h-40 bg-secondary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
+          </div>
         </div>
 
         <div className="lg:col-span-12 mt-6 lg:hidden">

@@ -41,7 +41,7 @@ export const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-[15vw] sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tight sm:tracking-tighter leading-[0.85] uppercase">
                 Remin <br />
-                <span className="text-muted-foreground/20 outline-text">
+                <span className="text-muted-foreground/40 outline-text">
                   T Roy
                 </span>
               </h1>
