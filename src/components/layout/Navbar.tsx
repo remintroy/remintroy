@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -23,6 +23,7 @@ export const Navbar = () => {
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
     const root = window.document.documentElement;
     if (newTheme === "dark") {
       root.classList.add("dark");

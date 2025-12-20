@@ -6,31 +6,7 @@ import { Footer } from "./components/layout/Footer";
 import { Section } from "./components/layout/Section";
 import { Button } from "./components/ui/button";
 import { Noise } from "./components/ui/noise";
-import { ProjectCard } from "./components/ui/ProjectCard";
-
-const projects = [
-  {
-    title: "EcoSphere Dashboard",
-    description:
-      "A real-time environmental monitoring system built with distributed microservices architecture for massive scale.",
-    tags: ["React", "Node.js", "Redis"],
-    year: "2024",
-  },
-  {
-    title: "Lumina Analytics",
-    description:
-      "High-performance data visualization platform processing millions of events per second with TypeScript and GraphQL.",
-    tags: ["Next.js", "Go", "InfluxDB"],
-    year: "2023",
-  },
-  {
-    title: "Nimbus Cloud Engine",
-    description:
-      "Cloud-native infrastructure management tool designed for automated scaling and resilient deployments.",
-    tags: ["Docker", "Kubernetes", "Express"],
-    year: "2023",
-  },
-];
+// import { Projects } from "./components/layout/Projects";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -86,49 +62,7 @@ function App() {
 
             <Hero />
 
-            <Section id="projects" className="relative">
-              {/* Background accent */}
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
-
-              <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16 md:mb-24">
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="h-[1px] w-12 bg-primary" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-primary">
-                      Portfolio
-                    </span>
-                  </div>
-                  <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-none">
-                    Selected <br />
-                    <span className="text-muted-foreground/30 outline-text">
-                      Works
-                    </span>
-                  </h2>
-                </div>
-                <div className="hidden md:block max-w-sm text-right">
-                  <p className="text-muted-foreground text-lg italic">
-                    Curated selection of projects showcasing expertise in
-                    distributed systems and modern web architecture.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-                {projects.map((project, i) => (
-                  <ProjectCard key={i} {...project} index={i} />
-                ))}
-              </div>
-
-              <div className="mt-20 flex justify-center">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="rounded-full px-12 h-14 text-lg border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                >
-                  View All Projects
-                </Button>
-              </div>
-            </Section>
+            {/* <Projects /> */}
 
             <Section
               id="about"
@@ -158,46 +92,75 @@ function App() {
                     . Loves problem-solving and cares about writing readable and
                     maintainable code.
                   </p>
+                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-light mt-6">
+                    I&apos;m a huge advocate for{" "}
+                    <span className="text-foreground font-medium italic">
+                      open-source software
+                    </span>{" "}
+                    and I&apos;m always looking for exciting projects to
+                    contribute to. If you have a project that needs an extra
+                    pair of hands, I&apos;d love to collaborate!
+                  </p>
                 </div>
 
-                <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    {
-                      label: "Experience",
-                      value: "5+ Years",
-                      desc: "Professional development",
-                    },
-                    {
-                      label: "Completed",
-                      value: "50+",
-                      desc: "Successful projects",
-                    },
-                    {
-                      label: "Stack",
-                      value: "MERN",
-                      desc: "Full-stack excellence",
-                    },
-                    {
-                      label: "Location",
-                      value: "Kerala",
-                      desc: "Operating globally",
-                    },
-                  ].map((stat, i) => (
-                    <div
-                      key={i}
-                      className="p-8 rounded-3xl bg-background border border-border/50 shadow-sm hover:border-primary/30 transition-colors group"
-                    >
-                      <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-4">
-                        {stat.label}
+                <div className="lg:col-span-5 flex flex-col gap-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      {
+                        label: "Experience",
+                        value: "5+ Years",
+                        desc: "Professional dev",
+                      },
+                      {
+                        label: "Open Source",
+                        value: "Active",
+                        desc: "Contributor",
+                      },
+                    ].map((stat, i) => (
+                      <div
+                        key={i}
+                        className="p-6 rounded-3xl bg-background border border-border/50 shadow-sm hover:border-primary/30 transition-colors group"
+                      >
+                        <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-2">
+                          {stat.label}
+                        </div>
+                        <div className="text-2xl font-black tracking-tighter mb-1 transition-transform group-hover:scale-110 origin-left">
+                          {stat.value}
+                        </div>
+                        <div className="text-[10px] text-muted-foreground">
+                          {stat.desc}
+                        </div>
                       </div>
-                      <div className="text-4xl font-black tracking-tighter mb-1 transition-transform group-hover:scale-110 origin-left">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-muted-foreground">
-                        {stat.desc}
-                      </div>
+                    ))}
+                  </div>
+
+                  <div className="p-8 rounded-3xl bg-primary/[0.02] border border-dashed border-primary/20">
+                    <h3 className="text-sm font-bold uppercase tracking-widest mb-6">
+                      Technical Stack
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        "React",
+                        "TypeScript",
+                        "Node.js",
+                        "Express",
+                        "MongoDB",
+                        "Docker",
+                        "AWS",
+                        "Redis",
+                        "Next.js",
+                        "Tailwind CSS",
+                        "Framer Motion",
+                      ].map((skill) => (
+                        <div
+                          key={skill}
+                          className="px-3 py-1 rounded-full bg-background border text-xs font-medium hover:border-primary/50 transition-colors cursor-default"
+                        >
+                          {skill}
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </Section>
@@ -238,7 +201,7 @@ function App() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="h-16 px-12 rounded-full text-xl border-white/20 text-white hover:bg-white hover:text-black"
+                    className="h-16 px-12 rounded-full text-xl border-white/20 text-white bg-transparent hover:bg-white hover:text-black transition-all duration-300"
                   >
                     LinkedIn
                   </Button>
