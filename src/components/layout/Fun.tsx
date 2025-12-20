@@ -8,18 +8,18 @@ export const Fun = () => {
 
   return (
     <Section id="fun" className="bg-background relative overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
         <div className="lg:col-span-12 mb-4">
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-sm font-bold uppercase tracking-widest text-primary flex items-center gap-2">
+            <span className="text-sm font-bold uppercase tracking-widest text-primary flex items-center gap-2 whitespace-nowrap">
               <Sparkles className="h-4 w-4" /> Fun & Curiosity
             </span>
             <div className="h-[1px] flex-1 bg-border" />
           </div>
         </div>
 
-        <div className="lg:col-span-6 space-y-8">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-none">
+        <div className="lg:col-span-6 space-y-6 md:space-y-8">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.9]">
             The <br />
             <span className="text-muted-foreground/20 outline-text">
               15-Puzzle
@@ -27,15 +27,16 @@ export const Fun = () => {
             <br />
             Game
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed font-light max-w-xl">
-            A classic mechanical puzzle that challenges your logic and spatial
-            thinking. I built this digital version to experiment with complex
-            state management and smooth layout animations.
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light max-w-xl">
+            Just a little something I built for fun! This is a digital version
+            of the classic 15-puzzle. It&apos;s a great way to kill a few
+            minutes and keep your brain sharp. Go ahead, give it a try—can you
+            beat the clock?
           </p>
-          <div className="pt-4">
+          <div className="pt-2">
             <Button
               size="lg"
-              className="h-14 px-8 rounded-full text-lg gap-2 group"
+              className="h-14 px-8 rounded-full text-lg gap-2 group w-full sm:w-auto"
               onClick={() =>
                 window.open("https://fun.mastrovia.com/", "_blank")
               }
@@ -46,36 +47,41 @@ export const Fun = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
+        <div className="lg:col-span-6 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative w-full max-w-[400px] p-6 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 shadow-2xl overflow-hidden group"
+            className="relative w-full max-w-[320px] sm:max-w-[400px] p-4 sm:p-6 rounded-[2rem] sm:rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 shadow-2xl overflow-hidden group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
 
             {/* Header info like screenshot */}
-            <div className="flex justify-between items-start mb-6 px-2">
-              <div className="flex gap-4 bg-neutral-900/50 p-3 rounded-2xl border border-white/5">
+            <div className="flex justify-between items-start mb-4 sm:mb-6 px-1 sm:px-2">
+              <div className="flex gap-3 sm:gap-4 bg-neutral-900/50 p-2 sm:p-3 rounded-xl sm:rounded-2xl border border-white/5">
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-neutral-500">
+                  <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-neutral-500">
                     Time
                   </span>
-                  <span className="text-xl font-black text-white">33s</span>
+                  <span className="text-lg sm:text-xl font-black text-white">
+                    33s
+                  </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-neutral-500">
+                  <span className="text-[8px] sm:text-[10px] uppercase font-bold tracking-wider text-neutral-500">
                     Moves
                   </span>
-                  <span className="text-xl font-black text-white">75</span>
+                  <span className="text-lg sm:text-xl font-black text-white">
+                    75
+                  </span>
                 </div>
               </div>
               <div className="flex gap-2">
-                <div className="w-10 h-10 rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
                   <svg
-                    width="20"
-                    height="20"
+                    width="16"
+                    height="16"
+                    className="sm:w-5 sm:h-5"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -90,10 +96,11 @@ export const Fun = () => {
                     <line x1="8" y1="23" x2="16" y2="23"></line>
                   </svg>
                 </div>
-                <div className="w-10 h-10 rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-neutral-900/50 flex items-center justify-center border border-white/5 text-neutral-400">
                   <svg
-                    width="20"
-                    height="20"
+                    width="16"
+                    height="16"
+                    className="sm:w-5 sm:h-5"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -109,14 +116,14 @@ export const Fun = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-4 gap-3 bg-neutral-900/30 p-3 rounded-3xl border border-white/5 shadow-inner mb-6">
+            <div className="grid grid-cols-4 gap-2 sm:gap-3 bg-neutral-900/30 p-2 sm:p-3 rounded-[1.5rem] sm:rounded-3xl border border-white/5 shadow-inner mb-4 sm:mb-6">
               {puzzleTiles.map((tile, i) => (
                 <motion.div
                   key={i}
                   initial={tile === null ? {} : { opacity: 0, y: 10 }}
                   whileInView={tile === null ? {} : { opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.03 }}
-                  className={`aspect-square rounded-xl flex items-center justify-center text-xl font-bold shadow-sm ${
+                  className={`aspect-square rounded-lg sm:rounded-xl flex items-center justify-center text-base sm:text-xl font-bold shadow-sm ${
                     tile === null
                       ? "bg-neutral-800/40 border border-white/5"
                       : i < 3
@@ -129,16 +136,16 @@ export const Fun = () => {
               ))}
             </div>
 
-            <div className="px-2">
-              <div className="w-full h-14 rounded-2xl bg-neutral-900/50 border border-white/5 flex items-center justify-center text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">
+            <div className="px-1 sm:px-2">
+              <div className="w-full h-12 sm:h-14 rounded-xl sm:rounded-2xl bg-neutral-900/50 border border-white/5 flex items-center justify-center text-[10px] sm:text-sm font-bold uppercase tracking-[0.2em] text-neutral-400">
                 Restart
               </div>
             </div>
           </motion.div>
 
           {/* Decorative elements */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-[80px] rounded-full -z-10" />
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 blur-[80px] rounded-full -z-10" />
+          <div className="absolute -top-6 -right-6 sm:-top-10 sm:-right-10 w-32 h-32 sm:w-40 sm:h-40 bg-primary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
+          <div className="absolute -bottom-6 -left-6 sm:-bottom-10 sm:-left-10 w-32 h-32 sm:w-40 sm:h-40 bg-secondary/20 blur-[60px] sm:blur-[80px] rounded-full -z-10" />
         </div>
       </div>
     </Section>

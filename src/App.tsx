@@ -83,10 +83,10 @@ function App() {
                 </div>
 
                 <div className="lg:col-span-7 space-y-12">
-                  <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase whitespace-pre-line">
+                  <h2 className="text-4xl md:text-7xl font-black tracking-tighter uppercase whitespace-pre-line leading-[0.9]">
                     {"Building\nWith Purpose."}
                   </h2>
-                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-light">
+                  <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-light">
                     A self-taught MERN stack developer based in Palakkad,
                     Kerala. Curious to learn more about developing{" "}
                     <span className="text-foreground font-medium underline decoration-primary/30 decoration-4">
@@ -95,7 +95,7 @@ function App() {
                     . Loves problem-solving and cares about writing readable and
                     maintainable code.
                   </p>
-                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-light mt-6">
+                  <p className="text-lg md:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-light mt-6">
                     I&apos;m a huge advocate for{" "}
                     <span className="text-foreground font-medium italic">
                       open-source software
@@ -178,7 +178,7 @@ function App() {
                   <span className="text-sm font-bold uppercase tracking-[0.3em] text-white/40">
                     Contact
                   </span>
-                  <h2 className="text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase">
+                  <h2 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase leading-[0.85]">
                     Let&apos;s <br />{" "}
                     <span
                       className="text-white/20 outline-text"
@@ -189,7 +189,7 @@ function App() {
                   </h2>
                 </div>
 
-                <p className="text-white/60 text-xl md:text-2xl font-light max-w-2xl leading-relaxed">
+                <p className="text-white/60 text-lg md:text-2xl font-light max-w-2xl leading-relaxed">
                   I&apos;m currently open to new opportunities and interesting
                   projects. If you have an idea, let&apos;s make it happen.
                 </p>

@@ -11,7 +11,7 @@ export const Footer = () => {
               Building scalable distributed systems with passion.
             </p>
           </div>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             <a
               href="https://github.com/remintroy"
               target="_blank"
