@@ -17,6 +17,6 @@ I am a self-taught full-stack developer. Currently busy learning and acquiring n
 
 #### Some of my works
 
-[**dynotxt-blog**](https://dynotxt.pages.dev) -
-[**nester-ecommerce**](https://shop.dynotxt.com) -
+[**mastrovia**](https://mastrovia.com) -
+[**microconnect**](https://microconnect.store) -
 [**fifteen-puzzle**](https://game.remin.in) 
